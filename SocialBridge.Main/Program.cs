@@ -1,3 +1,5 @@
+using SocialBridge.Main.Infrastructure;
+
 const string CorsPolicy = "AllowLocalhost3000";
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,8 @@ services.AddCors(options =>
 
 // Add services to the container.
 services.AddRazorPages();
+
+DiContainerConfig.AddDatabase(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
