@@ -5,8 +5,8 @@ import { RouterView } from 'vue-router'
 <template>
   <v-app>
     <v-app-bar fixed app>
-      <v-btn to='/' variant="text" color="primary">Home</v-btn>
-      <v-btn to='/about' variant="text" color="primary">About</v-btn>
+      <v-btn to='/' variant="text" color="primary">{{ $t('home') }}</v-btn>
+      <v-btn to='/about' variant="text" color="primary">{{ $t('about') }}</v-btn>
     </v-app-bar>
     <v-container class="main">
       <RouterView />
