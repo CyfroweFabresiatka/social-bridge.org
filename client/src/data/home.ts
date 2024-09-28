@@ -5,7 +5,7 @@ export const useHomeQuery = () => {
   const fetch = useFetch();
   const { data, isLoading } = createQuery(
     ['home'],
-    () => fetch.get<any>('/products')
+    () => fetch.get<any>('/api/v1/projects')
   );
   
   return { data, isLoading };
