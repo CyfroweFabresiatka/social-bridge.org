@@ -10,6 +10,7 @@ public class ProjectListDto
     public decimal BudgetAmountFrom { get; set; }
     public decimal? BudgetAmountTo { get; set; }
     public string BudgetType { get; set; } = "";
+    public string NgoName { get; set; }
 }
 
 public class ProjectLocationDto
@@ -31,6 +32,7 @@ public static class ProjectListDtoMapper
             BudgetType = project.BudgetType.ToString(),
             BudgetAmountFrom = project.BudgetAmountFrom,
             BudgetAmountTo = project.BudgetAmountTo,
+            NgoName = project.Ngo.Name,
         };
     }
 }

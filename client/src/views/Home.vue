@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { useHomeQuery } from '@/data/home'
+import { useProjectsQuery, useGrantsQuery } from '@/data/home'
 import { ref } from 'vue'
 import ProjectListItem from '@/components/ProjectListItem.vue'
+import GrantListItem from '@/components/GrantListItem.vue'
 
 const tags = ['ekologia','nauka'];
 const tab = ref(1);
 
-const { data } = useHomeQuery();
+const { projects } = useProjectsQuery();
+const { grants } = useGrantsQuery()
 </script>
 
 <template>
@@ -39,10 +41,10 @@ const { data } = useHomeQuery();
     <v-col>
       <v-tabs-window v-model="tab">
         <v-tabs-window-item :value="1">
-          <ProjectListItem v-for="item in data" :key="item.slug" :item="item" />
+          <ProjectListItem v-for="item in projects" :key="item.slug" :item="item" />
         </v-tabs-window-item>
         <v-tabs-window-item :value="2">
-          <p>Granty</p>
+          <GrantListItem v-for="item in grants" :key="item.slug" :item="item" />
         </v-tabs-window-item>
       </v-tabs-window>
     </v-col>

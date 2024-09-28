@@ -24,7 +24,7 @@ const budgetDescription = computed(() => {
     <v-row>
       <v-col>
         <v-card-title>{{item.name}}</v-card-title>
-        <v-card-text>{{item.city}}</v-card-text>
+        <v-card-text>{{item.ngoName}}, {{item.city}}</v-card-text>
       </v-col>
       <v-col>
         <v-card-text>{{budgetDescription}}</v-card-text>

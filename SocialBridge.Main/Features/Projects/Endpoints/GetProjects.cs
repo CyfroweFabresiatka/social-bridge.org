@@ -22,6 +22,7 @@ namespace SocialBridge.Main.Features.Projects.Endpoints
                     .AsNoTracking()
                     .Include(x => x.Tags)
                     .Include(x => x.Locations)
+                    .Include(x => x.Ngo)
                     .OrderByDescending(x => x.CreatedAt)
                     .ToArrayAsync(cancellationToken);
 
