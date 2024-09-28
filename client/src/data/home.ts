@@ -5,8 +5,14 @@ export const useHomeQuery = () => {
   const fetch = useFetch();
   const { data, isLoading } = createQuery(
     ['home'],
-    () => fetch.get<any>('/api/v1/projects')
+    () => fetch.get<Project[]>('/api/v1/projects')
   );
   
   return { data, isLoading };
+}
+
+export interface Project {
+  name: string;
+  slug: string;
+  description: string;
 }

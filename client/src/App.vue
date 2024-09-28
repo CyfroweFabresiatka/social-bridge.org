@@ -17,14 +17,15 @@ import UserMenu from './views/UserMenu.vue'
       >
       <user-menu></user-menu>
     </v-app-bar>
-    <v-container class="main">
+    <section class="main">
       <RouterView />
-    </v-container>
+    </section>
   </v-app>
 </template>
 
 <style scoped>
 .main {
   margin-top: 5rem;
+  padding: 0 20px;
 }
 </style>
