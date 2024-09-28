@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useHomeQuery } from '@/data/home'
 import { ref } from 'vue'
+import ProjectListItem from '@/components/ProjectListItem.vue'
 
 const tags = ['ekologia','nauka'];
 const tab = ref(1);
 
-const query = useHomeQuery();
+const { data } = useHomeQuery();
 </script>
 
 <template>
@@ -25,20 +26,20 @@ const query = useHomeQuery();
   </v-row>
   <v-row>
     <v-col>
-      <v-tabs
-        v-model="tab"
-        color="secondary"
-      >
-        <v-tab :value="1">Projekty</v-tab>
-        <v-tab :value="2">Granty</v-tab>
-      </v-tabs>
-    </v-col>
+        <v-tabs
+          v-model="tab"
+          color="secondary"
+        >
+          <v-tab :value="1">Projekty</v-tab>
+          <v-tab :value="2">Granty</v-tab>
+        </v-tabs>
+      </v-col>
   </v-row>
   <v-row>
     <v-col>
       <v-tabs-window v-model="tab">
         <v-tabs-window-item :value="1">
-          Projekty
+          <ProjectListItem v-for="item in data" :key="item.slug" :item="item" />
         </v-tabs-window-item>
         <v-tabs-window-item :value="2">
           <p>Granty</p>

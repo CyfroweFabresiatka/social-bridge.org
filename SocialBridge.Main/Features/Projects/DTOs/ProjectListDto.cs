@@ -6,15 +6,31 @@ public class ProjectListDto
 {
     public string Slug { get; set; } = string.Empty;
     public string Name { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
+    public string City { get; set; }
+    public decimal BudgetAmountFrom { get; set; }
+    public decimal? BudgetAmountTo { get; set; }
+    public string BudgetType { get; set; } = "";
+}
+
+public class ProjectLocationDto
+{ 
+    public string City { get; set; } = string.Empty;
 }
 
 public static class ProjectListDtoMapper
 {
-    public static ProjectListDto ToDto(this Project project) => new ProjectListDto
+    public static ProjectListDto ToDto(this Project project)
     {
-        Slug = project.Slug,
-        Name = project.Name,
-        Description = project.Description,
-    };
+        var location = project.Locations.First();
+        
+        return new ProjectListDto
+        {
+            Slug = project.Slug,
+            Name = project.Name,
+            City = location.City,
+            BudgetType = project.BudgetType.ToString(),
+            BudgetAmountFrom = project.BudgetAmountFrom,
+            BudgetAmountTo = project.BudgetAmountTo,
+        };
+    }
 }

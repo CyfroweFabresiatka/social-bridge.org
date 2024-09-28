@@ -14,5 +14,13 @@ export const useHomeQuery = () => {
 export interface Project {
   name: string;
   slug: string;
-  description: string;
+  city: string;
+  budgetType: BudgetType;
+  budgetAmountFrom: number;
+  budgetAmountTo?: number;
+}
+
+export enum BudgetType {
+  Money = 'Money',
+  People = 'People',
 }
