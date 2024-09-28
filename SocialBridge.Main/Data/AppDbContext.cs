@@ -16,6 +16,9 @@ namespace SocialBridge.Main.Data
         public DbSet<User> Users => Set<User>();
         public DbSet<Ngo> Ngos => Set<Ngo>();
         public DbSet<Company> Companies => Set<Company>();
+        public DbSet<Application> Applications => Set<Application>();
+        public DbSet<Project> Projects => Set<Project>();
+        public DbSet<Grant> Grants => Set<Grant>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

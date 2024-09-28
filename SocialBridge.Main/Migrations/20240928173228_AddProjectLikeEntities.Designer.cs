@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SocialBridge.Main.Data;
@@ -11,9 +12,11 @@ using SocialBridge.Main.Data;
 namespace SocialBridge.Main.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240928173228_AddProjectLikeEntities")]
+    partial class AddProjectLikeEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,11 +47,11 @@ namespace SocialBridge.Main.Migrations
                         .HasColumnType("text")
                         .HasColumnName("email");
 
-                    b.Property<Guid?>("GrantId")
+                    b.Property<Guid>("GrantId")
                         .HasColumnType("uuid")
                         .HasColumnName("grant_id");
 
-                    b.Property<Guid?>("ProjectId")
+                    b.Property<Guid>("ProjectId")
                         .HasColumnType("uuid")
                         .HasColumnName("project_id");
 
@@ -156,7 +159,7 @@ namespace SocialBridge.Main.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("id");
 
-                    b.Property<Guid?>("CompanyId")
+                    b.Property<Guid>("CompanyId")
                         .HasColumnType("uuid")
                         .HasColumnName("company_id");
 
@@ -170,7 +173,7 @@ namespace SocialBridge.Main.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name");
 
-                    b.Property<Guid?>("NgoId")
+                    b.Property<Guid>("NgoId")
                         .HasColumnType("uuid")
                         .HasColumnName("ngo_id");
 
@@ -192,11 +195,15 @@ namespace SocialBridge.Main.Migrations
                 {
                     b.HasOne("SocialBridge.Main.Models.Grant", "Grant")
                         .WithMany()
-                        .HasForeignKey("GrantId");
+                        .HasForeignKey("GrantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("SocialBridge.Main.Models.Project", "Project")
                         .WithMany()
-                        .HasForeignKey("ProjectId");
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Grant");
 
@@ -229,11 +236,15 @@ namespace SocialBridge.Main.Migrations
                 {
                     b.HasOne("SocialBridge.Main.Models.Company", "Company")
                         .WithMany("Users")
-                        .HasForeignKey("CompanyId");
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("SocialBridge.Main.Models.Ngo", "Ngo")
                         .WithMany("Users")
-                        .HasForeignKey("NgoId");
+                        .HasForeignKey("NgoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Company");
 
