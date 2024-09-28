@@ -14,7 +14,7 @@ dotnet run
 ```
 
 #### Migrations
-
+ 
 List of migrations:
 `dotnet ef migrations list`
 
