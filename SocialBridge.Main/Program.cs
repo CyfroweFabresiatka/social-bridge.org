@@ -7,7 +7,8 @@ var services = builder.Services;
 // Add services to the container.
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
-
+services.AddCors();
+    
 DiContainerConfig.AddDatabase(builder.Services, builder.Configuration);
 DiContainerConfig.AddServices(builder.Services, builder.Configuration);
 
@@ -19,6 +20,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.MapGet("/", () => "Hello from World");
 var api = app.MapGroup("/api/v1");
