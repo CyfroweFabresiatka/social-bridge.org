@@ -1,4 +1,9 @@
 {
-  "home": "Strona główna",
-  "about": "O nas"
+  "menu":{
+    "app_name":"Social.Bridge",
+    "blog":"Blog",
+    "organisations":"Organizacje",
+    "create_project_or_grant":"Stwórz projekt lub grant",
+    "my_profile":"Mój profil"
+  }
 }
