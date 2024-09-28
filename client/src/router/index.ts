@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory, type RouteComponent, type RouteRecordRaw } from 'vue-router';
 import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
 import CreateProject from '@/views/CreateProject.vue'
-import News from '@/views/News.vue'
+import Blog from '@/views/Blog.vue'
 import Project from '@/views/Project.vue'
+import MyProfile from '@/views/MyProfile.vue'
+import Organisations from '@/views/Organisations.vue'
 
 export function createAppRouter() {
   const router = createRouter({
@@ -11,8 +12,9 @@ export function createAppRouter() {
     routes: [
       createRoute('/', 'home', Home, false),
       createRoute('/create-project', 'createProject', CreateProject, false),
-      createRoute('/about', 'about', About, false),
-      createRoute('/news', 'news', News, false),
+      createRoute('/organisations', 'organisations', Organisations, false),
+      createRoute('/my-profile', 'my-profile', MyProfile, false),
+      createRoute('/blog', 'blog', Blog, false),
       createRoute('/project/:id', 'project', Project, false)
     ],
   });
