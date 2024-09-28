@@ -7,7 +7,7 @@ import UserMenu from './views/UserMenu.vue'
   <v-app>
     <v-app-bar fixed app>
       <v-btn to="/" variant="text" color="primary"> {{ $t('menu.app_name') }} </v-btn>
-      <v-btn to="/organisations" variant="text" color="primary">
+      <v-btn to="/organizacje" variant="text" color="primary">
         {{ $t('menu.organisations') }}
       </v-btn>
       <v-btn to="/blog" variant="text" color="primary"> {{ $t('menu.blog') }} </v-btn>
