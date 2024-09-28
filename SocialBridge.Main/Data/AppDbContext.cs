@@ -1,7 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using SocialBridge.Main.Models;
 
 namespace SocialBridge.Main.Data
@@ -19,11 +18,20 @@ namespace SocialBridge.Main.Data
         public DbSet<Application> Applications => Set<Application>();
         public DbSet<Project> Projects => Set<Project>();
         public DbSet<Grant> Grants => Set<Grant>();
+        public DbSet<ProjectLocation> ProjectLocations => Set<ProjectLocation>();
+        public DbSet<ProjectTag> ProjectTags => Set<ProjectTag>();
+        public DbSet<Tag> Tags => Set<Tag>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Model.SetSnakeCaseNamingConvention();
+            modelBuilder.Entity<ProjectTag>()
+                .HasKey("ProjectId", "TagId");
+
+            modelBuilder.Entity<Project>()
+                .HasIndex(c => c.Slug).IsUnique();
+
         }
     }
 
