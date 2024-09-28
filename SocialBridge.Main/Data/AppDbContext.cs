@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using SocialBridge.Main.Models;
 
 namespace SocialBridge.Main.Data
