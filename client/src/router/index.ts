@@ -15,7 +15,7 @@ export function createAppRouter() {
       createRoute('/organisations', 'organisations', Organisations, false),
       createRoute('/my-profile', 'my-profile', MyProfile, false),
       createRoute('/blog', 'blog', Blog, false),
-      createRoute('/project/:id', 'project', Project, false)
+      createRoute('/project/:slug', 'project', Project, false)
     ],
   });
   

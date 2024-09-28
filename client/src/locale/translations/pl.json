@@ -5,5 +5,8 @@
     "organisations":"Organizacje",
     "create_project_or_grant":"Stwórz projekt lub grant",
     "my_profile":"Mój profil"
+  },
+  "project":{
+    "button_interested": "Jestem zainteresowany"
   }
 }

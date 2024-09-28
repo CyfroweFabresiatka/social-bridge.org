@@ -7,6 +7,9 @@ namespace SocialBridge.Main.Features.Projects
     {
         public static void MapProjects(this RouteGroupBuilder api)
         {
+            api.MapGet<GetProject>("project")
+                .WithOpenApiDescription("Get project");
+            
             api.MapGet<GetProjects>("projects")
                 .WithOpenApiDescription("Get projects");
 
