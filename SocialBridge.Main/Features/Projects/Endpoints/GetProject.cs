@@ -19,10 +19,12 @@ namespace SocialBridge.Main.Features.Projects.Endpoints
 
             public async Task<IResult> Handle(GetProject request, CancellationToken cancellationToken)
             {
-                var project = await _dbContext.Projects.FirstOrDefaultAsync(x => x.Slug == request.ProjectSlug,
-                    cancellationToken: cancellationToken);
-                
-                return Results.Ok(project);
+                var project = await _dbContext
+                    .Projects.Include(x=>x.Ngo)
+                    .FirstOrDefaultAsync(x => x.Slug == request.ProjectSlug, 
+                        cancellationToken: cancellationToken);
+
+                return project == null ? Results.NotFound() : Results.Ok(project);
             }
         }
     }
