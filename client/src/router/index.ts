@@ -8,7 +8,7 @@ import Home from '@/views/Home.vue'
 import CreateProject from '@/views/CreateProject.vue'
 import Blog from '@/views/Blog.vue'
 import Project from '@/views/Project.vue'
-import MyProfile from '@/views/MyProfile.vue'
+import MyProfile from '@/views/MyProfile/MyProfile.vue'
 import Organisations from '@/views/Organisations.vue'
 import Login from '@/views/Login.vue'
 

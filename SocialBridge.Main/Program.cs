@@ -1,3 +1,4 @@
+using SocialBridge.Main.Features.Ngos;
 using SocialBridge.Main.Features.Projects;
 using SocialBridge.Main.Infrastructure;
 
@@ -30,5 +31,6 @@ app.MapGet("/", () => "Hello from World");
 var api = app.MapGroup("/api/v1");
 api.MapProjects();
 api.MapCompanies();
+api.MapNgos();
 
 app.Run();

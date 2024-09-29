@@ -1,6 +1,6 @@
-﻿namespace SocialBridge.Main.Features.Companies.DTOs
+﻿namespace SocialBridge.Main.Features.Ngos.DTOs
 {
-    public class CompanyGetDto
+    public class NgoGetDto
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = "";
