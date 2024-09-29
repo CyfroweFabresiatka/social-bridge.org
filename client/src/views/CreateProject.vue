@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useProjectMutation } from '@/data/project/project'
-import { getUser, getGuid} from '@/store/auth'
+import { BudgetType } from '@/data/home'
+//import { getUser, getGuid} from '@/store/auth'
 
-const user = ref<string>(getUser())
-const guid = ref<string>(getGuid())
+// const user = ref<string>(getUser())
+// const ngoId = ref<string>(getGuid())
 
 const { addMutationFn } = useProjectMutation()
 
-const ngoId = ref<string>(guid)
 const name = ref<string>('')
 const slug = ref<string>('')
 const description = ref<string>('')
-const budgetAmountFrom = ref<number>('')
-const budgetAmountTo = ref<number>('')
+const budgetAmountFrom = ref<number>(0)
+const budgetAmountTo = ref<number>(0)
 const plannedStartDate = ref<any>('')
 const plannedEndDate = ref<any>('')
-const locationsIds = ref<string>([0,1])
-const tagsIds = ref<string>([0,1])
+const locationsIds = ref<number[]>([0,1])
+const tagsIds = ref<number[]>([0,1])
 
 function valid() {
   return name.value.trim() !== ''
@@ -27,15 +27,16 @@ async function onSubmit() {
   alert(plannedStartDate.value);
   await addMutationFn({
     ngoId : "",
-    name : name,
-    slug : slug,
-    description : description,
-    budgetAmountFrom : budgetAmountFrom,
-    budgetAmountTo : budgetAmountTo,
-    plannedStartDate : plannedStartDate,
-    plannedEndDate : plannedEndDate,
-    locationsIds : locationsIds,
-    tagsIds : tagsIds,
+    name : name.value,
+    slug : slug.value,
+    description : description.value,
+    budgetAmountFrom : budgetAmountFrom.value,
+    budgetAmountTo : budgetAmountTo.value,
+    plannedStartDate : plannedStartDate.value,
+    plannedEndDate : plannedEndDate.value,
+    locationsIds : locationsIds.value,
+    tagsIds : tagsIds.value,
+    budgetType: BudgetType.Money,
   })
   name.value = ''
 }

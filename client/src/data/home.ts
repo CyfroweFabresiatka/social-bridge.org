@@ -1,4 +1,5 @@
 import { createQuery } from '@/data/index';
+const storage = sessionStorage;
 
 export const useProjectsQuery = () => {
   const { data: projects, isLoading } = createQuery(
@@ -23,9 +24,20 @@ async function loadGrants() {
   return <Grant[]>grants.default;
 }
 
-async function loadProjects() {
-  const grants = await import('./projects.json');
-  return <Project[]>grants.default;
+export async function loadProjects(): Promise<Project[]> {
+  const key = 'projects-v1';
+  
+  let data = storage.getItem(key);
+  if (data) {
+    return JSON.parse(data);
+  }
+  
+  const projectsModule = await import('./projects.json');
+  const projects = <Project[]>projectsModule.default;
+
+
+  storage.setItem(key, JSON.stringify(projects));
+  return projects;
 }
 
 export interface Project {

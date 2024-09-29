@@ -1,3 +1,5 @@
+import type { BudgetType } from '@/data/home'
+
 export interface Project {
     budgetAmountFrom: number;
     budgetAmountTo: number;
@@ -20,7 +22,7 @@ export interface Ngo {
     name: string;
 }
 
-interface CreateProject {
+export interface CreateProjectReq {
     ngoId: string;
     name: string;
     slug: string;
@@ -30,6 +32,6 @@ interface CreateProject {
     budgetType: BudgetType;
     plannedStartDate?: Date;
     plannedEndDate?: Date;
-    locationsIds: string[];
-    tags: string[];
+    locationsIds: number[];
+    tagsIds: number[];
 }
