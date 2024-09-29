@@ -1,7 +1,7 @@
 import { createQuery } from '@/data/index'
 import { useFetch } from '@/fetch'
-import { type Project } from '@/data/project/models'
-import { useMutation, useQuery, useQueryClient } from '@tanstack/vue-query'
+import { type CreateProjectReq, type Project } from '@/data/project/models'
+import { useMutation, useQueryClient } from '@tanstack/vue-query'
 
 export const useProjectQuery = (productSlug: string) => {
     const fetch = useFetch();
@@ -13,18 +13,18 @@ export const useProjectQuery = (productSlug: string) => {
     return { data, isLoading, error };
 }
 
-export function useProjectMutation(request: CreateProject) {
+export function useProjectMutation() {
     const queryClient = useQueryClient()
     const onSuccess = () => queryClient.invalidateQueries({ queryKey: ['project'] })
     const fetch = useFetch();
     
     const addMutation = useMutation({
-        mutationFn: (request: CreateProject) => fetch.post<CreateProject>(`/api/v1/projects`, request),
+        mutationFn: (request: CreateProjectReq) => fetch.post<any>(`/api/v1/projects`, request),
         onSuccess: onSuccess
     })
 
     const editMutation = useMutation({
-        mutationFn: (request: CreateProject) => fetch.put<CreateProject>(`/api/v1/projects`, request),
+        mutationFn: (request: CreateProjectReq) => fetch.put<any>(`/api/v1/projects`, request),
         onSuccess: onSuccess
     })
 
