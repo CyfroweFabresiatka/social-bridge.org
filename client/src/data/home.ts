@@ -1,18 +1,15 @@
-import { createQuery } from '@/data/index'
-import { useFetch } from '@/fetch'
+import { createQuery } from '@/data/index';
 
 export const useProjectsQuery = () => {
-  const fetch = useFetch();
   const { data: projects, isLoading } = createQuery(
     ['home-projects'],
-    () => fetch.get<Project[]>('/api/v1/projects')
+    () => loadProjects()
   );
   
   return { projects, isLoading };
 }
 
 export const useGrantsQuery = () => {
-  //const fetch = useFetch();
   const { data: grants, isLoading } = createQuery(
     ['home-grants'],
     () => loadGrants()
@@ -24,6 +21,11 @@ export const useGrantsQuery = () => {
 async function loadGrants() {
   const grants = await import('./grants.json');
   return <Grant[]>grants.default;
+}
+
+async function loadProjects() {
+  const grants = await import('./projects.json');
+  return <Project[]>grants.default;
 }
 
 export interface Project {
