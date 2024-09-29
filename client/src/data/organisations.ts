@@ -60,6 +60,7 @@ export interface Company {
   slug: string;
   name: string;
   city: string;
+  tags: string[];
 }
 
 export interface Ngo extends Company {

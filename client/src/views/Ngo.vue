@@ -34,10 +34,9 @@ const {data, isLoading, error} = useNgoQuery(<string>slug);
            
           </v-col>
           <v-col>
-            <v-chip variant="outlined" v-for="tag in data.tags" class="tag" :value="tag" color="primary">
+            <v-chip variant="outlined" v-for="tag in data!.tags" class="tag" :value="tag" color="primary">
               {{ tag }}
             </v-chip>
-            <v-card-text>{{ budgetDescription }}</v-card-text>
           </v-col>
         </v-row>
       </v-card>
