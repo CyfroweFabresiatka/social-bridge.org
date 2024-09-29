@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "my_first_project",
+    "name": "My first project",
+    "city": "Szczecin",
+    "budgetAmountFrom": 10000,
+    "budgetAmountTo": 20000,
+    "budgetType": "Money",
+    "ngoName": "Ngo 1"
+  },
+  {
+    "slug": "my_second_project",
+    "name": "My second project",
+    "city": "Luboń",
+    "budgetAmountFrom": 10,
+    "budgetAmountTo": null,
+    "budgetType": "People",
+    "ngoName": "Ngo 2"
+  }
+]

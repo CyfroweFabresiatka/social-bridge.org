@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "fabres",
+    "name": "Fabres",
+    "city": "Poznań"
+  },
+  {
+    "slug": "microsoft",
+    "name": "Microsoft",
+    "city": "Warszawa"
+  },
+  {
+    "slug": "google",
+    "name": "Google",
+    "city": "Gdańsk"
+  }
+]
