@@ -11,6 +11,8 @@ import Project from '@/views/Project.vue'
 import MyProfile from '@/views/MyProfile/MyProfile.vue'
 import Organisations from '@/views/Organisations.vue'
 import Login from '@/views/Login.vue'
+import Ngo from '@/views/Ngo.vue'
+import Company from '@/views/Company.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,7 +23,9 @@ const router = createRouter({
         createRoute('/my-profile', 'my-profile', MyProfile, false),
         createRoute('/blog', 'blog', Blog, false),
         createRoute('/projekty/:slug', 'project', Project, false),
-        createRoute('/login', 'login', Login, false)
+        createRoute('/login', 'login', Login, false),
+        createRoute('/ngo/:slug', 'ngo', Ngo, false),
+        createRoute('/company/:slug', 'company', Company, false)
     ]
 })
 
