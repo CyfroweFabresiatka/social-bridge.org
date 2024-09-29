@@ -7,7 +7,7 @@ import UserMenu from './views/UserMenu.vue'
   <v-app>
     <v-app-bar fixed app>
       <v-btn to="/" variant="text" color="primary"> {{ $t('menu.app_name') }} </v-btn>
-      <v-btn to="/organisations" variant="text" color="primary">
+      <v-btn to="/organizacje" variant="text" color="primary">
         {{ $t('menu.organisations') }}
       </v-btn>
       <v-btn to="/blog" variant="text" color="primary"> {{ $t('menu.blog') }} </v-btn>
@@ -17,14 +17,15 @@ import UserMenu from './views/UserMenu.vue'
       >
       <user-menu></user-menu>
     </v-app-bar>
-    <v-container class="main">
+    <section class="main">
       <RouterView />
-    </v-container>
+    </section>
   </v-app>
 </template>
 
 <style scoped>
 .main {
   margin-top: 5rem;
+  padding: 0 20px;
 }
 </style>

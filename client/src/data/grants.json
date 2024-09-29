@@ -1,0 +1,26 @@
+[
+  {
+    "name": "My first grant",
+    "slug": "my-first-grant",
+    "city": "Szczecin",
+    "companyName": "Szczecin Port",
+    "budgetFrom": 20000,
+    "budgetTo": 50000
+  },
+  {
+    "name": "My second grant",
+    "slug": "my-second-grant",
+    "city": "Poznań",
+    "companyName": "Fabres",
+    "budgetFrom": 15000,
+    "budgetTo": 25000
+  },
+  {
+    "name": "Grant 1 ",
+    "slug": "grant-1",
+    "city": "Kraków",
+    "companyName": "Tauron Arena",
+    "budgetFrom": 750000,
+    "budgetTo": 750000
+  }
+]

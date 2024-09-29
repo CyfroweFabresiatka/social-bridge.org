@@ -24,7 +24,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <v-btn v-if="user === ''" to="/login"> Login </v-btn>
+  <v-btn v-if="user === ''" to="/login"> Zaloguj </v-btn>
   <v-container v-if="user !== ''" width="auto">
     <v-row>
       <v-menu min-width="200px" rounded>
@@ -44,9 +44,9 @@ onUnmounted(() => {
               <h3>{{ user }}</h3>
               <p class="text-caption mt-1">{{ user }}@gmail.com</p>
               <v-divider class="my-3"></v-divider>
-              <v-btn variant="text" rounded to="/my-profile"> My Profile </v-btn>
+              <v-btn variant="text" rounded to="/my-profile"> Mój profil </v-btn>
               <v-divider class="my-3"></v-divider>
-              <v-btn variant="text" rounded :onclick="onLogout"> Logout </v-btn>
+              <v-btn variant="text" rounded :onclick="onLogout"> Wyloguj </v-btn>
             </div>
           </v-card-text>
         </v-card>

@@ -8,16 +8,17 @@ import Home from '@/views/Home.vue'
 import CreateProject from '@/views/CreateProject.vue'
 import Blog from '@/views/Blog.vue'
 import Project from '@/views/Project.vue'
-import MyProfile from '@/views/MyProfile.vue'
+import MyProfile from '@/views/MyProfile/MyProfile.vue'
 import Organisations from '@/views/Organisations.vue'
 import Login from '@/views/Login.vue'
+import MyProfile from '@/views/MyProfile/MyProfile.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         createRoute('/', 'home', Home, false),
         createRoute('/create-project', 'createProject', CreateProject, false),
-        createRoute('/organisations', 'organisations', Organisations, false),
+        createRoute('/organizacje', 'organisations', Organisations, false),
         createRoute('/my-profile', 'my-profile', MyProfile, false),
         createRoute('/blog', 'blog', Blog, false),
         createRoute('/project/:slug', 'project', Project, false),

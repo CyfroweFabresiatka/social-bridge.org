@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import router from '@/router'
-import { setUser, UserType } from '@/store/auth'
+import { setUser, type UserType } from '@/store/auth'
 import { ref } from 'vue'
 
 // Form data
@@ -10,13 +10,10 @@ const valid = ref<boolean>(false)
 const form = ref<any>(null)
 
 const loginRules = [
-  (v: string) => v === 'Firma' || v === 'Fundacja' || 'Login should be either Firma or Fundacja'
+  (v: string) => v === 'Firma' || v === 'Fundacja' || 'Login to Firma lub Fundacja'
 ]
 
-const passwordRules = [
-  (v: string) => !!v || 'Password is required',
-  (v: string) => v.length >= 6 || 'Password must be at least 6 characters'
-]
+const passwordRules = [(v: string) => !!v || 'Hasło wymagane']
 
 // Handle form submission
 const submitLogin = () => {
@@ -38,13 +35,13 @@ const submitLogin = () => {
 
           <v-text-field
             v-model="password"
-            label="Password"
+            label="Hasło"
             :rules="passwordRules"
             type="password"
             required
           ></v-text-field>
 
-          <v-btn color="primary" :disabled="!valid" type="submit"> Login </v-btn>
+          <v-btn color="primary" :disabled="!valid" type="submit"> Zaloguj </v-btn>
         </v-form>
       </v-card-text>
     </v-card>
