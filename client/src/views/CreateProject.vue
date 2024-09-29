@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useProjectMutation } from '@/data/project/project'
-import { BudgetType } from '@/data/home'
 //@ts-ignore
 import v from 'voca'
 

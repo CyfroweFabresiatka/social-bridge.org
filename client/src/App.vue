@@ -13,7 +13,7 @@ import UserMenu from './views/UserMenu.vue'
       </v-btn>
       <v-btn class="menuBtn" to="/blog" variant="text" color="primary"> <span class="txt">{{ $t('menu.blog') }}</span> </v-btn>
       <v-spacer></v-spacer>
-      <v-btn class="mr-3 specialBtn" to="/create-project" variant="text" color="primary">
+      <v-btn class="mr-3 specialBtn" to="/nowy-projekt" variant="text" color="primary">
         <span class="txt"> {{ $t('menu.create_project_or_grant') }}</span></v-btn
       >
       <user-menu></user-menu>
@@ -25,6 +25,11 @@ import UserMenu from './views/UserMenu.vue'
 </template>
 
 <style scoped>
+.main {
+  margin-top: 74px;
+  padding: 0 20px;
+}
+
 @font-face {
   font-family: "Raleway Thin";
   src: url('./assets/fonts/Raleway-Thin.ttf');
