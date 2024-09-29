@@ -37,4 +37,7 @@ const budgetDescription = computed(() => {
 </template>
 
 <style scoped lang="scss">
+.tag {
+  margin-right: 5px;
+}
 </style>

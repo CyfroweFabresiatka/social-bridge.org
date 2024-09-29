@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <v-card class="item" variant="flat" border="border" :to="`/company/${item.slug}`">
+  <v-card class="item" variant="flat" border="border" :to="`/firmy/${item.slug}`">
     <v-row>
       <v-col>
         <v-card-title>{{item.name}}</v-card-title>

@@ -1,29 +1,83 @@
 [
   {
-    "name": "My first grant",
-    "slug": "my-first-grant",
-    "city": "Szczecin",
-    "companyName": "Szczecin Port",
-    "budgetFrom": 20000,
-    "budgetTo": 50000,
-    "tags": ["Ekologia", "Edukacja"]
+    "name": "Zielona inicjatywa miejska",
+    "slug": "zielona-inicjatywa-miejska",
+    "city": "Warszawa",
+    "companyName": "Warsaw Energy",
+    "budgetFrom": 30000,
+    "budgetTo": 70000,
+    "tags": ["Ochrona środowiska", "Zrównoważony rozwój"]
   },
   {
-    "name": "My second grant",
-    "slug": "my-second-grant",
-    "city": "Poznań",
-    "companyName": "Fabres",
-    "budgetFrom": 15000,
-    "budgetTo": 25000,
-    "tags": ["Zdrowie", "Edukacja"]
-  },
-  {
-    "name": "Grant 1 ",
-    "slug": "grant-1",
+    "name": "Cyfrowa przyszłość",
+    "slug": "cyfrowa-przyszlosc",
     "city": "Kraków",
-    "companyName": "Tauron Arena",
-    "budgetFrom": 750000,
-    "budgetTo": 750000,
-    "tags": ["Ekologia"]
+    "companyName": "Krakow Tech",
+    "budgetFrom": 15000,
+    "budgetTo": 45000,
+    "tags": ["Technologia", "Innowacje"]
+  },
+  {
+    "name": "Edukacja dla wszystkich",
+    "slug": "edukacja-dla-wszystkich",
+    "city": "Poznań",
+    "companyName": "Uniwersytet Poznański",
+    "budgetFrom": 25000,
+    "budgetTo": 60000,
+    "tags": ["Edukacja", "Społeczność"]
+  },
+  {
+    "name": "Innowacje w zdrowiu",
+    "slug": "innowacje-w-zdrowiu",
+    "city": "Łódź",
+    "companyName": "Centrum Zdrowia Łódź",
+    "budgetFrom": 20000,
+    "budgetTo": 55000,
+    "tags": ["Zdrowie", "Technologia"]
+  },
+  {
+    "name": "Wsparcie sztuki i kultury",
+    "slug": "wsparcie-sztuki-i-kultury",
+    "city": "Gdańsk",
+    "companyName": "Fundacja Sztuki Gdańsk",
+    "budgetFrom": 10000,
+    "budgetTo": 30000,
+    "tags": ["Kultura", "Sztuka"]
+  },
+  {
+    "name": "Młodzi liderzy",
+    "slug": "mlodzi-liderzy",
+    "city": "Wrocław",
+    "companyName": "Wrocław Business Hub",
+    "budgetFrom": 18000,
+    "budgetTo": 40000,
+    "tags": ["Liderzy", "Rozwój osobisty"]
+  },
+  {
+    "name": "Rozwój sportu dzieci",
+    "slug": "rozwoj-sportu-dzieci",
+    "city": "Katowice",
+    "companyName": "Katowickie Stowarzyszenie Sportowe",
+    "budgetFrom": 12000,
+    "budgetTo": 35000,
+    "tags": ["Sport", "Dzieci"]
+  },
+  {
+    "name": "Program Czyste Powietrze",
+    "slug": "program-czyste-powietrze",
+    "city": "Lublin",
+    "companyName": "Lubelska Agencja Ochrony Środowiska",
+    "budgetFrom": 15000,
+    "budgetTo": 50000,
+    "tags": ["Ekologia", "Zrównoważony rozwój"]
+  },
+  {
+    "name": "Wsparcie lokalnej społeczności",
+    "slug": "wsparcie-lokalnej-spolecznosci",
+    "city": "Rzeszów",
+    "companyName": "Fundusz Rozwoju Rzeszowa",
+    "budgetFrom": 10000,
+    "budgetTo": 40000,
+    "tags": ["Społeczność", "Pomoc"]
   }
 ]

@@ -8,5 +8,55 @@
     "slug": "serdeczna",
     "name": "Fundacja Serdeczna",
     "city": "Kraków"
+  },
+  {
+    "slug": "polska-akcja-humanitarna",
+    "name": "Polska Akcja Humanitarna",
+    "city": "Warszawa"
+  },
+  {
+    "slug": "wielkopolska-siec-organizacji-pozarzadowych-dzialamy-razem",
+    "name": "Wielkopolska Sieć Organizacji Pozarządowych 'Działamy Razem'",
+    "city": "Miejska Górka"
+  },
+  {
+    "slug": "zielona-ziemia",
+    "name": "Fundacja Zielona Ziemia",
+    "city": "Gdańsk"
+  },
+  {
+    "slug": "edukacja-dla-wszystkich",
+    "name": "Fundacja Edukacja dla Wszystkich",
+    "city": "Wrocław"
+  },
+  {
+    "slug": "zdrowie-razem",
+    "name": "Stowarzyszenie Zdrowie Razem",
+    "city": "Poznań"
+  },
+  {
+    "slug": "dzieci-nadziei",
+    "name": "Fundacja Dzieci Nadziei",
+    "city": "Łódź"
+  },
+  {
+    "slug": "natura-i-ludzie",
+    "name": "Fundacja Natura i Ludzie",
+    "city": "Katowice"
+  },
+  {
+    "slug": "kulturalni-seniorzy",
+    "name": "Stowarzyszenie Kulturalni Seniorzy",
+    "city": "Lublin"
+  },
+  {
+    "slug": "milosc-do-zwierzat",
+    "name": "Fundacja Miłość do Zwierząt",
+    "city": "Szczecin"
+  },
+  {
+    "slug": "energia-mlodych",
+    "name": "Fundacja Energia Młodych",
+    "city": "Rzeszów"
   }
 ]
