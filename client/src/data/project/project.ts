@@ -1,7 +1,4 @@
-import { createQuery } from '@/data/index'
-import { useFetch } from '@/fetch'
-import { type CreateProjectReq } from '@/data/project/models'
-import { useMutation, useQueryClient } from '@tanstack/vue-query'
+import { createQuery } from '@/data'
 import { loadProjects } from '@/data/home'
 
 export const useProjectQuery = (slug: string) => {
@@ -19,6 +16,7 @@ async function loadProject(slug: string) {
     return projects.find(x => x.slug === slug) ?? null;
 }
 
+/*
 export function useProjectMutation() {
     const queryClient = useQueryClient()
     const onSuccess = () => queryClient.invalidateQueries({ queryKey: ['project'] })
@@ -26,12 +24,12 @@ export function useProjectMutation() {
     
     const addMutation = useMutation({
         mutationFn: (request: CreateProjectReq) => fetch.post<any>(`/api/v1/projects`, request),
-        onSuccess: onSuccess
+        onSuccess
     })
 
     const editMutation = useMutation({
         mutationFn: (request: CreateProjectReq) => fetch.put<any>(`/api/v1/projects`, request),
-        onSuccess: onSuccess
+        onSuccess
     })
 
     return {
@@ -39,3 +37,4 @@ export function useProjectMutation() {
         editMutationFn: editMutation.mutateAsync
     }
 }
+*/

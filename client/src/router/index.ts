@@ -16,7 +16,7 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         createRoute('/', 'home', Home, false),
-        createRoute('/create-project', 'createProject', CreateProject, false),
+        createRoute('/nowy-projekt', 'createProject', CreateProject, false),
         createRoute('/organizacje', 'organisations', Organisations, false),
         createRoute('/my-profile', 'my-profile', MyProfile, false),
         createRoute('/blog', 'blog', Blog, false),
