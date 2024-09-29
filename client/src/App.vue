@@ -77,4 +77,8 @@ import UserMenu from './views/UserMenu.vue'
   }
 }
 
+.main {
+  margin-top: 80px;
+}
+
 </style>

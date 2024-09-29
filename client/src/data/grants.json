@@ -5,7 +5,8 @@
     "city": "Szczecin",
     "companyName": "Szczecin Port",
     "budgetFrom": 20000,
-    "budgetTo": 50000
+    "budgetTo": 50000,
+    "tags": ["Ekologia", "Edukacja"]
   },
   {
     "name": "My second grant",
@@ -13,7 +14,8 @@
     "city": "Poznań",
     "companyName": "Fabres",
     "budgetFrom": 15000,
-    "budgetTo": 25000
+    "budgetTo": 25000,
+    "tags": ["Zdrowie", "Edukacja"]
   },
   {
     "name": "Grant 1 ",
@@ -21,6 +23,7 @@
     "city": "Kraków",
     "companyName": "Tauron Arena",
     "budgetFrom": 750000,
-    "budgetTo": 750000
+    "budgetTo": 750000,
+    "tags": ["Ekologia"]
   }
 ]
