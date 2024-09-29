@@ -2,6 +2,7 @@
   "menu":{
     "app_name":"Social.Bridge",
     "blog":"Blog",
+    "things":"Ogłoszenia",
     "organisations":"Organizacje",
     "create_project_or_grant":"Stwórz projekt lub grant",
     "my_profile":"Mój profil"

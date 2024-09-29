@@ -6,6 +6,7 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { VueQueryPlugin } from '@tanstack/vue-query'
+import { lightTheme } from '@/plugins/themes'
 
 import App from './App.vue'
 import router from './router'
@@ -13,7 +14,13 @@ import { createLocale } from '@/locale'
 
 const vuetify = createVuetify({
   components,
-  directives
+  directives,
+  theme: {
+    themes: {
+      lightTheme,
+    },
+    defaultTheme: 'lightTheme'
+  }
 })
 const locale = await createLocale()
 
