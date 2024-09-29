@@ -6,7 +6,8 @@
     "budgetAmountFrom": 10000,
     "budgetAmountTo": 20000,
     "budgetType": "Money",
-    "ngoName": "Ngo 1"
+    "ngoName": "Ngo 1",
+    "tags": ["Ekologia", "Edukacja"]
   },
   {
     "slug": "my_second_project",
@@ -15,6 +16,7 @@
     "budgetAmountFrom": 10,
     "budgetAmountTo": null,
     "budgetType": "People",
-    "ngoName": "Ngo 2"
+    "ngoName": "Ngo 2",
+    "tags": ["Ekologia", "Zdrowie"]
   }
 ]

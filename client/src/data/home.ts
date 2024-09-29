@@ -2,26 +2,20 @@ import { createQuery } from '@/data/index';
 const storage = sessionStorage;
 
 export const useProjectsQuery = () => {
-  const { data: projects, isLoading } = createQuery(
-    ['home-projects'],
-    () => loadProjects()
-  );
-  
-  return { projects, isLoading };
+  const { data: projects, isLoading } = createQuery(['home-projects'], () => loadProjects())
+
+  return { projects, isLoading }
 }
 
 export const useGrantsQuery = () => {
-  const { data: grants, isLoading } = createQuery(
-    ['home-grants'],
-    () => loadGrants()
-  );
+  const { data: grants, isLoading } = createQuery(['home-grants'], () => loadGrants())
 
-  return { grants, isLoading };
+  return { grants, isLoading }
 }
 
 async function loadGrants() {
-  const grants = await import('./grants.json');
-  return <Grant[]>grants.default;
+  const grants = await import('./grants.json')
+  return <Grant[]>grants.default
 }
 
 export async function loadProjects(): Promise<Project[]> {
@@ -41,25 +35,27 @@ export async function loadProjects(): Promise<Project[]> {
 }
 
 export interface Project {
-  name: string;
-  slug: string;
-  city: string;
-  budgetType: BudgetType;
-  budgetAmountFrom: number;
-  budgetAmountTo?: number;
-  ngoName: string;
+  name: string
+  slug: string
+  city: string
+  budgetType: BudgetType
+  budgetAmountFrom: number
+  budgetAmountTo?: number
+  ngoName: string
+  tags: string[]
 }
 
 export interface Grant {
-  name: string;
-  slug: string;
-  city: string;
-  budgetFrom: number;
-  budgetTo: number;
-  companyName: string;
+  name: string
+  slug: string
+  city: string
+  budgetFrom: number
+  budgetTo: number
+  companyName: string
+  tags: string[]
 }
 
 export enum BudgetType {
   Money = 'Money',
-  People = 'People',
+  People = 'People'
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getUser } from '@/store/auth'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import MyCompany from './MyCompany.vue'
 import MyNgo from './MyNgo.vue'
 import { useMyComapnyQuery } from '@/data/organisations/company'
