@@ -15,10 +15,10 @@ const {data, isLoading, error} = useCompanyQuery(<string>slug);
       <v-card class="mb-2 pa-8" style="border-radius:15px" variant="flat" border="border">
         <v-row>
           <v-col>
-            <h1>{{ data.name }}</h1>
-            <p>{{ data.city }}</p>
+            <h1>{{ data!.name }}</h1>
+            <p>{{ data!.city }}</p>
             <p class="mt-5">
-              {{ data.name }} is a leading provider of innovative technology solutions, specializing in delivering cutting-edge IT services to businesses of all sizes. We offer a wide range of services, including cloud computing, cybersecurity, software development, IT consulting, and managed services. Our team of expert engineers and consultants is dedicated to helping clients optimize their technology infrastructure, improve operational efficiency, and enhance digital transformation strategies.
+              {{ data!.name }} is a leading provider of innovative technology solutions, specializing in delivering cutting-edge IT services to businesses of all sizes. We offer a wide range of services, including cloud computing, cybersecurity, software development, IT consulting, and managed services. Our team of expert engineers and consultants is dedicated to helping clients optimize their technology infrastructure, improve operational efficiency, and enhance digital transformation strategies.
             </p>
           </v-col>
           <v-col class="mt-5 ml-5">
