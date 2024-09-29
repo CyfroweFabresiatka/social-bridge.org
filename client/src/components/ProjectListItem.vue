@@ -20,7 +20,7 @@ const budgetDescription = computed(() => {
 </script>
 
 <template>
-  <v-card class="item" variant="flat" border="border" :to="`/projects/${item.slug}`">
+  <v-card class="item" variant="flat" border="border" :to="`/projekty/${item.slug}`">
     <v-row>
       <v-col>
         <v-card-title>{{item.name}}</v-card-title>

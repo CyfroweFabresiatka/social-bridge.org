@@ -1,16 +1,22 @@
 import { createQuery } from '@/data/index'
 import { useFetch } from '@/fetch'
-import { type CreateProjectReq, type Project } from '@/data/project/models'
+import { type CreateProjectReq } from '@/data/project/models'
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
+import { loadProjects } from '@/data/home'
 
-export const useProjectQuery = (productSlug: string) => {
-    const fetch = useFetch();
-    const { data, isLoading, error } = createQuery<Project>(
-        ['project', productSlug],
-        () => fetch.get<Project>(`/api/v1/projects/${productSlug}`)
+export const useProjectQuery = (slug: string) => {
+    const { data, isLoading, error } = createQuery(
+        ['project', slug],
+        () => loadProject(slug)
     );
     
     return { data, isLoading, error };
+}
+
+async function loadProject(slug: string) {
+    const projects = await loadProjects();
+    
+    return projects.find(x => x.slug === slug) ?? null;
 }
 
 export function useProjectMutation() {

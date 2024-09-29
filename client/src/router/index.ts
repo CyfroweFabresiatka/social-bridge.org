@@ -20,7 +20,7 @@ const router = createRouter({
         createRoute('/organizacje', 'organisations', Organisations, false),
         createRoute('/my-profile', 'my-profile', MyProfile, false),
         createRoute('/blog', 'blog', Blog, false),
-        createRoute('/project/:slug', 'project', Project, false),
+        createRoute('/projekty/:slug', 'project', Project, false),
         createRoute('/login', 'login', Login, false)
     ]
 })

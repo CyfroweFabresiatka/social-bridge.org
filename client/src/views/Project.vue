@@ -3,8 +3,8 @@ import { useRoute } from 'vue-router'
 import { useProjectQuery } from '@/data/project/project'
 
 const route = useRoute();
-const slug = route.params.slug[0] ?? '';
-const { data, isLoading, error } = useProjectQuery(slug)
+const slug = route.params.slug ?? '';
+const { data, isLoading, error } = useProjectQuery(<string>slug)
 
 </script>
 
