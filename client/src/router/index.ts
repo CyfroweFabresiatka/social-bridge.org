@@ -25,7 +25,7 @@ const router = createRouter({
         createRoute('/projekty/:slug', 'project', Project, false),
         createRoute('/login', 'login', Login, false),
         createRoute('/ngo/:slug', 'ngo', Ngo, false),
-        createRoute('/company/:slug', 'company', Company, false)
+        createRoute('/firmy/:slug', 'company', Company, false)
     ]
 })
 
