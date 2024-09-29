@@ -11,7 +11,6 @@ import Project from '@/views/Project.vue'
 import MyProfile from '@/views/MyProfile/MyProfile.vue'
 import Organisations from '@/views/Organisations.vue'
 import Login from '@/views/Login.vue'
-import MyProfile from '@/views/MyProfile/MyProfile.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
