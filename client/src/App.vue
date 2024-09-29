@@ -81,4 +81,7 @@ import UserMenu from './views/UserMenu.vue'
   margin-top: 80px;
 }
 
+.main{
+  margin: 130px 120px;
+}
 </style>

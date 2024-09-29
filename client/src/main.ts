@@ -7,6 +7,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { lightTheme } from '@/plugins/themes'
+import '@mdi/font/css/materialdesignicons.css';
 
 import App from './App.vue'
 import router from './router'

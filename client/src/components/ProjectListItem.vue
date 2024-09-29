@@ -20,13 +20,16 @@ const budgetDescription = computed(() => {
 </script>
 
 <template>
-  <v-card class="item" variant="flat" border="border" :to="`/projekty/${item.slug}`">
+  <v-card class="mb-2 pa-4" style="border-radius:15px" variant="flat" border="border" :to="`/projekty/${item.slug}`">
     <v-row>
       <v-col>
         <v-card-title>{{item.name}}</v-card-title>
         <v-card-text>{{item.ngoName}}, {{item.city}}</v-card-text>
       </v-col>
       <v-col>
+        <v-chip variant="outlined" v-for="tag in item.tags" class="tag" :value="tag" color="primary">
+          {{ tag }}
+        </v-chip>
         <v-card-text>{{budgetDescription}}</v-card-text>
       </v-col>
     </v-row>
@@ -34,8 +37,4 @@ const budgetDescription = computed(() => {
 </template>
 
 <style scoped lang="scss">
-.item {
-  margin-bottom: 10px;
-  cursor: pointer;
-}
 </style>

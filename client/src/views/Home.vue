@@ -53,10 +53,31 @@ const filteredGrants = computed<Grant[]>(() => {
 
 <template>
   <v-row>
-    <v-col cols="3">
-      <v-text-field v-model="search" variant="outlined" label="Szukaj" density="compact" />
+    <v-col cols="4">
+      <v-text-field
+          prepend-inner-icon="mdi-magnify"
+          v-model="search"
+          label="Szukaj"
+          density="compact"
+          variant="solo-filled"
+          rounded="pill"
+      />
     </v-col>
-    <v-col>
+    <v-col cols="4">
+      <v-autocomplete
+          class="elevation-0"
+          prepend-inner-icon="mdi-magnify"
+          chips
+          density="compact"
+          closable-chips
+          multiple
+          label="Locations"
+          variant="solo-filled"
+          rounded="pill"
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+      ></v-autocomplete>
+    </v-col>
+    <v-col cols="4">
       <v-chip-group multiple v-model="selectedTags">
         <v-chip variant="outlined" v-for="tag in tags" class="tag" :value="tag" color="primary">
           {{ tag }}
@@ -64,26 +85,40 @@ const filteredGrants = computed<Grant[]>(() => {
       </v-chip-group>
     </v-col>
   </v-row>
+  
   <v-row>
-    <v-col>
-      <v-tabs v-model="tab" color="secondary">
-        <v-tab :value="1">Projekty</v-tab>
-        <v-tab :value="2">Granty</v-tab>
-      </v-tabs>
+
+    <v-col cols="6">
+      <v-row>
+        
+        <v-col>
+          <v-tabs v-model="tab" color="secondary">
+            <v-tab :value="1">Projekty</v-tab>
+            <v-tab :value="2">Granty</v-tab>
+          </v-tabs>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-tabs-window v-model="tab">
+            <v-tabs-window-item :value="1">
+              <ProjectListItem v-for="item in filteredProjects" :key="item.slug" :item="item" />
+            </v-tabs-window-item>
+            <v-tabs-window-item :value="2">
+              <GrantListItem v-for="item in filteredGrants" :key="item.slug" :item="item" />
+            </v-tabs-window-item>
+          </v-tabs-window>
+        </v-col>
+      </v-row>
     </v-col>
-  </v-row>
-  <v-row>
-    <v-col>
-      <v-tabs-window v-model="tab">
-        <v-tabs-window-item :value="1">
-          <ProjectListItem v-for="item in filteredProjects" :key="item.slug" :item="item" />
-        </v-tabs-window-item>
-        <v-tabs-window-item :value="2">
-          <GrantListItem v-for="item in filteredGrants" :key="item.slug" :item="item" />
-        </v-tabs-window-item>
-      </v-tabs-window>
+
+    <v-col cols="6">
+      <img class="fin" src="@/assets/finished.png" />
     </v-col>
+
   </v-row>
+  
+
 </template>
 
 <style scoped lang="scss">
@@ -94,5 +129,9 @@ const filteredGrants = computed<Grant[]>(() => {
   &:hover {
     background-color: lightgrey;
   }
+}
+
+.fin{
+  width: 100%;
 }
 </style>
