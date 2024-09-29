@@ -1,10 +1,5 @@
 [
   {
-    "slug": "fabres",
-    "name": "Fabres",
-    "city": "Poznań"
-  },
-  {
     "slug": "microsoft",
     "name": "Microsoft",
     "city": "Warszawa"
@@ -12,6 +7,46 @@
   {
     "slug": "google",
     "name": "Google",
+    "city": "Warszawa"
+  },
+  {
+    "slug": "apple",
+    "name": "Apple",
+    "city": "Kraków"
+  },
+  {
+    "slug": "ibm",
+    "name": "IBM",
+    "city": "Wrocław"
+  },
+  {
+    "slug": "oracle",
+    "name": "Oracle",
+    "city": "Poznań"
+  },
+  {
+    "slug": "samsung",
+    "name": "Samsung",
     "city": "Gdańsk"
+  },
+  {
+    "slug": "intel",
+    "name": "Intel",
+    "city": "Katowice"
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "city": "Łódź"
+  },
+  {
+    "slug": "facebook",
+    "name": "Meta (Facebook)",
+    "city": "Warszawa"
+  },
+  {
+    "slug": "dell",
+    "name": "Dell",
+    "city": "Lublin"
   }
 ]

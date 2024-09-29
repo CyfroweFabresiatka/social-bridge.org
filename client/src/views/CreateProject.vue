@@ -36,14 +36,46 @@ watch(name, (newValue) => {
   <v-form :value="valid()" class="form">
     <v-row>
       <v-col>
-        <v-text-field v-model="name" name="name" :label="$t('project.project_name')" variant="outlined"
-                      density="compact" />
-          <v-text-field v-model="slug" label="Slug" variant="outlined" density="compact" readonly />
-          <v-textarea v-model="description" label="Description" variant="outlined" density="compact" />
-          <v-text-field v-model="budgetAmountFrom" label="Budget Amount From" type="number" variant="outlined"
-                        density="compact" />
-          <v-text-field v-model="budgetAmountTo" label="Budget Amount To" type="number" variant="outlined"
-                        density="compact" />
+        <v-text-field v-model="name"
+                      name="name"
+                      :label="$t('project.project_name')"
+                      density="compact"
+                      variant="solo-filled"
+                      rounded="pill"
+        />
+          <v-text-field
+            v-model="slug"
+            label="Slug"
+            density="compact"
+            variant="solo-filled"
+            rounded="pill"
+            readonly />
+          <v-textarea 
+            v-model="description"
+            label="Description"
+            variant="solo-filled"
+            density="compact"
+          />
+        <v-row>
+          <v-col>
+            <v-text-field
+              v-model="budgetAmountFrom"
+              label="Budget Amount From"
+              type="number"
+              variant="solo-filled"
+              rounded="pill"
+            />
+          </v-col>
+          <v-col>
+            <v-text-field
+              v-model="budgetAmountTo"
+              label="Budget Amount To"
+              type="number"
+              variant="solo-filled"
+              rounded="pill"
+            />
+          </v-col>
+        </v-row>
           <v-date-picker></v-date-picker>
       </v-col>
     </v-row>

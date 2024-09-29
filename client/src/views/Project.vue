@@ -16,8 +16,8 @@ const {data, isLoading, error} = useProjectQuery(<string>slug)
       <v-card class="mb-2 pa-4" style="border-radius:15px" variant="flat" border="border">
         <v-row>
           <v-col>
-            <v-card-title>{{ data.name }}</v-card-title>
-            <v-card-text>{{ data.ngoName }}, {{ data.city }}
+            <v-card-title>{{ data!.name }}</v-card-title>
+            <v-card-text>{{ data!.ngoName }}, {{ data!.city }}
 
 
               <div>
@@ -26,10 +26,9 @@ const {data, isLoading, error} = useProjectQuery(<string>slug)
             </v-card-text>
           </v-col>
           <v-col>
-            <v-chip variant="outlined" v-for="tag in data.tags" class="tag" :value="tag" color="primary">
+            <v-chip variant="outlined" v-for="tag in data!.tags" class="tag" :value="tag" color="primary">
               {{ tag }}
             </v-chip>
-            <v-card-text>{{ budgetDescription }}</v-card-text>
           </v-col>
         </v-row>
       </v-card>
@@ -42,4 +41,7 @@ const {data, isLoading, error} = useProjectQuery(<string>slug)
 </template>
 
 <style scoped>
+.tag {
+  margin-right: 5px;
+}
 </style>

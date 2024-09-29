@@ -13,9 +13,11 @@ const tab = ref(1);
   <v-row>
     <v-col cols="3">
       <v-text-field
-        variant="outlined"
+        prepend-inner-icon="mdi-magnify"
         label="Szukaj"
         density="compact"
+        variant="solo-filled"
+        rounded="pill"
       />
     </v-col>
   </v-row>

@@ -19,7 +19,7 @@ async function loadGrants() {
 }
 
 export async function loadProjects(): Promise<Project[]> {
-  const key = 'projects-v1';
+  const key = 'projects-v2';
   
   let data = storage.getItem(key);
   if (data) {

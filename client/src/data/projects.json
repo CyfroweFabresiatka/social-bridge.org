@@ -1,22 +1,92 @@
 [
   {
-    "slug": "my_first_project",
-    "name": "My first project",
-    "city": "Szczecin",
-    "budgetAmountFrom": 10000,
-    "budgetAmountTo": 20000,
+    "slug": "green_initiative",
+    "name": "Green Initiative",
+    "city": "Warszawa",
+    "budgetAmountFrom": 15000,
+    "budgetAmountTo": 25000,
     "budgetType": "Money",
-    "ngoName": "Ngo 1",
-    "tags": ["Ekologia", "Edukacja"]
+    "ngoName": "Fundacja Ekologiczna",
+    "tags": ["Ochrona środowiska", "Zrównoważony rozwój"]
   },
   {
-    "slug": "my_second_project",
-    "name": "My second project",
-    "city": "Luboń",
+    "slug": "community_education",
+    "name": "Community Education Program",
+    "city": "Kraków",
+    "budgetAmountFrom": 20000,
+    "budgetAmountTo": 30000,
+    "budgetType": "Money",
+    "ngoName": "Edukacja Plus",
+    "tags": ["Edukacja", "Społeczność"]
+  },
+  {
+    "slug": "health_for_all",
+    "name": "Health for All",
+    "city": "Łódź",
+    "budgetAmountFrom": 8,
+    "budgetAmountTo": null,
+    "budgetType": "People",
+    "ngoName": "Zdrowie Razem",
+    "tags": ["Zdrowie", "Opieka medyczna"]
+  },
+  {
+    "slug": "artistic_vision",
+    "name": "Artistic Vision",
+    "city": "Gdańsk",
+    "budgetAmountFrom": 12000,
+    "budgetAmountTo": 22000,
+    "budgetType": "Money",
+    "ngoName": "Kultura i Sztuka",
+    "tags": ["Kultura", "Sztuka"]
+  },
+  {
+    "slug": "young_leaders",
+    "name": "Young Leaders",
+    "city": "Wrocław",
+    "budgetAmountFrom": 3,
+    "budgetAmountTo": null,
+    "budgetType": "People",
+    "ngoName": "Młodzi Aktywiści",
+    "tags": ["Liderzy", "Rozwój osobisty"]
+  },
+  {
+    "slug": "sports_for_kids",
+    "name": "Sports for Kids",
+    "city": "Poznań",
+    "budgetAmountFrom": 9000,
+    "budgetAmountTo": 18000,
+    "budgetType": "Money",
+    "ngoName": "Fundacja Sportowa",
+    "tags": ["Sport", "Dzieci"]
+  },
+  {
+    "slug": "digital_skills",
+    "name": "Digital Skills Academy",
+    "city": "Katowice",
     "budgetAmountFrom": 10,
     "budgetAmountTo": null,
     "budgetType": "People",
-    "ngoName": "Ngo 2",
-    "tags": ["Ekologia", "Zdrowie"]
+    "ngoName": "Nowoczesna Edukacja",
+    "tags": ["Technologia", "Edukacja"]
+  },
+  {
+    "slug": "clean_city",
+    "name": "Clean City Initiative",
+    "city": "Lublin",
+    "budgetAmountFrom": 6000,
+    "budgetAmountTo": 12000,
+    "budgetType": "Money",
+    "ngoName": "Czysta Przyszłość",
+    "tags": ["Ekologia", "Ochrona środowiska"]
+  },
+  {
+    "slug": "helping_hands",
+    "name": "Helping Hands Program",
+    "city": "Rzeszów",
+    "budgetAmountFrom": 5,
+    "budgetAmountTo": null,
+    "budgetType": "People",
+    "ngoName": "Wsparcie i Pomoc",
+    "tags": ["Pomoc", "Społeczność"]
   }
 ]

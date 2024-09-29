@@ -27,11 +27,19 @@ const submitLogin = () => {
 <template>
   <v-container class="login-container">
     <v-card max-width="400">
-      <v-card-title class="text-h5">Login</v-card-title>
+      <v-card-title class="text-h5">Zaloguj się</v-card-title>
 
       <v-card-text>
         <v-form ref="form" v-model="valid" @submit.prevent="submitLogin">
-          <v-text-field v-model="login" label="Login" :rules="loginRules" required></v-text-field>
+          <v-text-field
+            v-model="login"
+            label="Nazwa użytkownika"
+            :rules="loginRules"
+            required
+            density="compact"
+            variant="solo-filled"
+            rounded="pill"
+          ></v-text-field>
 
           <v-text-field
             v-model="password"
@@ -39,6 +47,9 @@ const submitLogin = () => {
             :rules="passwordRules"
             type="password"
             required
+            density="compact"
+            variant="solo-filled"
+            rounded="pill"
           ></v-text-field>
 
           <v-btn color="primary" :disabled="!valid" type="submit"> Zaloguj </v-btn>
