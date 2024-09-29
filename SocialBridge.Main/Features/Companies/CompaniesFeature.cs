@@ -15,5 +15,8 @@ public static class CompaniesFeature
 
         api.MapPost<UpdateCompany>("companies/{companyId:int}")
             .WithOpenApiDescription("Update selected company");
+
+        api.MapGet<GetMyCompany>("companies/my")
+            .WithOpenApiDescription("Get my company");
     }
 }
