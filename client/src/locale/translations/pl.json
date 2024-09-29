@@ -7,6 +7,8 @@
     "my_profile":"Mój profil"
   },
   "project":{
-    "button_interested": "Jestem zainteresowany"
+    "button_interested": "Jestem zainteresowany",
+    "project_name": "Nazwa projektu",
+    "addProject": "Dodaj projekt"
   }
 }

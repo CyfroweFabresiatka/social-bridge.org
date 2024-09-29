@@ -7,8 +7,17 @@ namespace SocialBridge.Main.Features.Projects.Endpoints
 {
     public class CreateProject : IRequest<IResult>
     {
-        public required string Name { get; init; }
         public Guid NgoId { get; set; }
+        public string Name { get; init; }
+        public string Slug { get; set; }
+        public string Description { get; set; }
+        public decimal BudgetAmountFrom { get; set; }
+        public decimal? BudgetAmountTo { get; set; }
+        public BudgetType BudgetType { get; set; }
+        public DateTime? PlannedStartDate { get; set; }
+        public DateTime? PlannedEndDate { get; set; }
+        public ICollection<Guid> LocationsIds { get; set; } = [];
+        public ICollection<Tag> TagsIds { get; set; } = [];
 
         public class Handler : IRequestHandler<CreateProject, IResult>
         {

@@ -8,8 +8,8 @@ export interface Project {
     locations: string[];
     name: string;
     ngo: Ngo;
-    plannedEndDate: string;
-    plannedStartDate: string;
+    plannedEndDate: Date;
+    plannedStartDate: Date;
     slug: string;
     status: number;
     tags: string[];
@@ -18,4 +18,18 @@ export interface Project {
 export interface Ngo {
     id: string;
     name: string;
+}
+
+interface CreateProject {
+    ngoId: string;
+    name: string;
+    slug: string;
+    description: string;
+    budgetAmountFrom: number;
+    budgetAmountTo?: number;
+    budgetType: BudgetType;
+    plannedStartDate?: Date;
+    plannedEndDate?: Date;
+    locationsIds: string[];
+    tags: string[];
 }
